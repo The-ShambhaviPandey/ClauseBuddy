@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
+import path from "path";
 import cors from "cors";
 import passport from "passport";
 import connectDB from "./config/db";
@@ -112,6 +113,13 @@ app.post("/api/upload", upload.array("files", 2), async (req, res) => {
     res.status(500).json({ error: "Internal Server Error", details: err });
   }
 });
+
+// Serve frontend build
+app.use(express.static(path.join(__dirname, "build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 
 
 // Start Server
