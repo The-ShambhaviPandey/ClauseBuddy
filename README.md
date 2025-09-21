@@ -45,9 +45,10 @@ This makes it useful for **lawyers, students, and professionals** who need faste
 - Google Gemini (summarization & QnA)  
 - Hugging Face (InLegalBERT for embeddings)  
 
-**Other Tools**  
-- Postman (API testing)  
-- Git & GitHub (version control)  
+**Other Tools** 
+- Google OAuth
+- Postman (API testing)
+- Git & GitHub (version control) 
 
 ---
 
@@ -183,3 +184,4 @@ This project is licensed under the **MIT License**.
 ---
 
 ```
+
