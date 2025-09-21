@@ -120,6 +120,11 @@ app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
+app.use(cors({
+  origin: "https://clause-buddy-ai.vercel.app/",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 
 // Start Server
