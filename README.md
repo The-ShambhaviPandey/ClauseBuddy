@@ -178,10 +178,12 @@ This project is licensed under the **MIT License**.
 ## 🙌 Acknowledgements
 
 * [Google Gemini](https://ai.google)
+* [Google OAuth](https://developers.google.com/identity/protocols/oauth2)
 * [Hugging Face](https://huggingface.co)
 * [FAISS](https://github.com/facebookresearch/faiss)
 
 ---
 
 ```
+
 
