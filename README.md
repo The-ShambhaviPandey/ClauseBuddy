@@ -1,58 +1,65 @@
+# ⚖️ LegalAI
 
-# ⚖️ LegalAI  
+[![Watch Demo](https://img.icons8.com/color/48/000000/video.png)](https://drive.google.com/file/d/1bSFBKTt3UUVE8fr9pqqHxm_RPo59NlTB/view?usp=sharing)  
+**🎬 Watch the demo video**
 
 LegalAI is an **AI-powered assistant** that helps analyze, summarize, and answer questions from **legal documents**.  
-It combines **domain-specific embeddings (InLegalBERT)** with **LLMs (Google Gemini)** and **semantic search (FAISS)** to make legal text easy to search, understand, and use.  
+It combines **domain-specific embeddings (InLegalBERT)** with **LLMs (Google Gemini)** and **semantic search (FAISS)** to make legal text easy to search, understand, and use.
 
 ---
 
-## 🔍 Overview  
+## Overview
 
 Legal documents are long, complex, and time-consuming to review.  
-**LegalAI** solves this by:  
-- Extracting and chunking text from uploaded documents  
-- Generating embeddings for semantic search  
-- Summarizing key points with LLMs  
-- Providing direct answers to user queries  
+**LegalAI** solves this by:
 
-This makes it useful for **lawyers, students, and professionals** who need faster insights into contracts, policies, and case files.  
+- Extracting and chunking text from uploaded documents
+- Generating embeddings for semantic search
+- Summarizing key points with LLMs
+- Providing direct answers to user queries
 
----
-
-## 🚀 Features  
-
-- 📂 Upload **legal PDFs or documents**  
-- ✨ Automatic text extraction & chunking  
-- 🔎 **Semantic search** with FAISS & InLegalBERT  
-- 🤖 **Summaries and Q&A** powered by Gemini + Hugging Face  
-- 🌐 Modern chat-style frontend with file upload support  
-- 💻 Works in both **offline (FAISS)** and **cloud-enabled** modes  
+This makes it useful for **lawyers, students, and professionals** who need faster insights into contracts, policies, and case files.
 
 ---
 
-## 🛠️ Tech Stack  
+## Features
 
-**Frontend**  
-- React / Next.js  
-- Tailwind CSS + shadcn/ui  
+- 📂 Upload **legal PDFs or documents**
+- ✨ Automatic text extraction & chunking
+- 🔎 **Semantic search** with FAISS & InLegalBERT
+- 🤖 **Summaries and Q&A** powered by Gemini + Hugging Face
+- 🌐 Modern chat-style frontend with file upload support
+- 💻 Works in both **offline (FAISS)** and **cloud-enabled** modes
 
-**Backend**  
-- Node.js + Express  
-- Faiss (Vector DB)  
-- MongoDB  
+---
 
-**AI/ML**  
-- Google Gemini (summarization & QnA)  
-- Hugging Face (InLegalBERT for embeddings)  
+## Tech Stack
 
-**Other Tools** 
+**Frontend**
+
+- React / Next.js
+- Tailwind CSS + shadcn/ui
+
+**Backend**
+
+- Node.js + Express
+- Faiss (Vector DB)
+- MongoDB
+
+**AI/ML**
+
+- Google Gemini (summarization & QnA)
+- Hugging Face (InLegalBERT for embeddings)
+
+**Other Tools**
+
 - Google OAuth
 - Postman (API testing)
-- Git & GitHub (version control) 
+- Git & GitHub (version control)
 
 ---
 
-## 📂 Project Structure  
+## Project Structure
 
 ```bash
 LegalAI/
@@ -62,8 +69,7 @@ LegalAI/
 │── test_integration.js # Static files
 │── .env.example        # Example environment variables
 │── README.md           # Main documentation
-````
-
+```
 
 ---
 
@@ -137,7 +143,7 @@ Now open [http://localhost:5000](http://localhost:8000) 🎉
 
 ---
 
-## 📖 Usage
+## Usage
 
 1. **Upload** a legal document (PDF/DOC).
 2. Backend extracts and **splits text into chunks**.
@@ -147,18 +153,18 @@ Now open [http://localhost:5000](http://localhost:8000) 🎉
 
 ---
 
-## 📊 Process Flow
+## Process Flow
 
 ```
-User → Frontend (Upload / Ask) → Backend (API) → 
-Text Extraction → Embeddings (Hugging Face / InLegalBERT) → 
-FAISS Vector DB → Query → Gemini (Summarization/QnA) → 
+User → Frontend (Upload / Ask) → Backend (API) →
+Text Extraction → Embeddings (Hugging Face / InLegalBERT) →
+FAISS Vector DB → Query → Gemini (Summarization/QnA) →
 Answer → Frontend
 ```
 
 ---
 
-## 🤝 Contribution
+## Contribution
 
 We welcome contributions!
 
@@ -169,21 +175,22 @@ We welcome contributions!
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the **MIT License**.
 
 ---
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
-* [Google Gemini](https://ai.google)
-* [Google OAuth](https://developers.google.com/identity/protocols/oauth2)
-* [Hugging Face](https://huggingface.co)
-* [FAISS](https://github.com/facebookresearch/faiss)
+- [Google Gemini](https://ai.google)
+- [Google OAuth](https://developers.google.com/identity/protocols/oauth2)
+- [Hugging Face](https://huggingface.co)
+- [FAISS](https://github.com/facebookresearch/faiss)
 
 ---
 
 ```
 
 
+```
