@@ -24,12 +24,12 @@ This makes it useful for **lawyers, students, and professionals** who need faste
 
 ## Features
 
-- 📂 Upload **legal PDFs or documents**
-- ✨ Automatic text extraction & chunking
-- 🔎 **Semantic search** with FAISS & InLegalBERT
-- 🤖 **Summaries and Q&A** powered by Gemini + Hugging Face
-- 🌐 Modern chat-style frontend with file upload support
-- 💻 Works in both **offline (FAISS)** and **cloud-enabled** modes
+- Upload **legal PDFs or documents**
+- Automatic text extraction & chunking
+- **Semantic search** with FAISS & InLegalBERT
+- **Summaries and Q&A** powered by Gemini + Hugging Face
+- Modern chat-style frontend with file upload support
+- Works in both **offline (FAISS)** and **cloud-enabled** modes
 
 ---
 
@@ -189,8 +189,3 @@ This project is licensed under the **MIT License**.
 - [FAISS](https://github.com/facebookresearch/faiss)
 
 ---
-
-```
-
-
-```
