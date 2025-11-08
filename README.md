@@ -1,4 +1,4 @@
-# ⚖️ LegalAI
+# ⚖️ ClauseBuddy - LegalAI
 
 [![Watch Demo](https://img.icons8.com/color/48/000000/video.png)](https://drive.google.com/file/d/1bSFBKTt3UUVE8fr9pqqHxm_RPo59NlTB/view?usp=sharing)  
 **🎬 Watch the demo video**
