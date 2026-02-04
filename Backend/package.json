@@ -1,10 +1,11 @@
 {
   "name": "backend1",
   "version": "1.0.0",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --watch src --exec ts-node src/index.ts",
-    "build": "tsc -p tsconfig.json",
+    "dev": "nodemon --watch src --exec node src/index.js",
+    "build": "rm -rf dist && mkdir -p dist && cp -R src/* dist/",
     "start": "node dist/index.js"
   },
   "keywords": [],
