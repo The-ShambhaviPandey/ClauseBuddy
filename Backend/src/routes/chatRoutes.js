@@ -1,7 +1,7 @@
 import express from 'express';
-import Chat from '../models/Chat';
-import File from '../models/File';
-import { authenticateToken } from '../middleware/auth';
+import Chat from '../models/Chat.js';
+import File from '../models/File.js';
+import { authenticateToken } from '../middleware/auth.js';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
