@@ -56,7 +56,7 @@ app.post("/api/upload", upload.array("files", 2), async (req, res) => {
     const files = Array.isArray(req.files) ? req.files : [];
     if (!files.length) return res.status(400).json({ error: "No files uploaded" });
 
-    const summaries: { filename: string; summary: string }[] = [];
+    const summaries = [];
 
     for (const file of files) {
       let text = "";
@@ -88,7 +88,7 @@ app.post("/api/upload", upload.array("files", 2), async (req, res) => {
       });
 
       // 3. Parse JSON safely
-      let result: any;
+      let result;
       try {
         result = await pyRes.json();
         if (!result.summary) {

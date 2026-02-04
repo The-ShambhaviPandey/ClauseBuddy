@@ -19,12 +19,12 @@ router.get('/google', passport.authenticate('google', { scope: ['profile', 'emai
 
 router.get('/google/callback', 
   passport.authenticate('google', { failureRedirect: '/login' }),
-  async (req: any, res) => {
+  async (req, res) => {
     try {
       // Generate JWT token
       const token = jwt.sign(
         { userId: req.user._id },
-        process.env.JWT_SECRET!,
+        process.env.JWT_SECRET,
         { expiresIn: '7d' }
       );
 
@@ -49,7 +49,7 @@ router.post('/google', async (req, res) => {
     // Verify the credential
     const ticket = await client.verifyIdToken({
       idToken: credential,
-      audience: process.env.GOOGLE_CLIENT_ID!,
+      audience: process.env.GOOGLE_CLIENT_ID,
     });
 
     const payload = ticket.getPayload();
@@ -76,7 +76,7 @@ router.post('/google', async (req, res) => {
     // Generate JWT token
     const token = jwt.sign(
       { userId: user._id },
-      process.env.JWT_SECRET!,
+      process.env.JWT_SECRET,
       { expiresIn: '7d' }
     );
 
@@ -110,7 +110,7 @@ router.get('/me', async (req, res) => {
       return res.status(401).json({ message: 'Access token required' });
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET!) as any;
+    const decoded = jwt.verify(token, process.env.JWT_SECRET) ;
     const user = await User.findById(decoded.userId).select('-googleId');
 
     if (!user) {

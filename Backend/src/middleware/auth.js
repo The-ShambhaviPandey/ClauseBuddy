@@ -1,12 +1,12 @@
 import jwt from 'jsonwebtoken';
-import { Request, Response, NextFunction } from 'express';
+
 import User from '../models/User';
 
-interface AuthRequest extends Request {
-  user?: any;
-}
 
-export const authenticateToken = async (req: AuthRequest, res: Response, next: NextFunction) => {
+
+
+
+export const authenticateToken = async (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
 
@@ -15,7 +15,7 @@ export const authenticateToken = async (req: AuthRequest, res: Response, next: N
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET!) as any;
+    const decoded = jwt.verify(token, process.env.JWT_SECRET) ;
     const user = await User.findById(decoded.userId);
     
     if (!user) {

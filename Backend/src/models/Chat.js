@@ -1,23 +1,23 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema, } from "mongoose";
 
-export interface IChat extends Document {
-  userId: mongoose.Types.ObjectId;
-  messages: {
-    role: 'user' | 'ai';
-    content: string;
-    timestamp: Date;
-    files?: {
-      fileName: string;
-      fileType: string;
-      fileSize: number;
-      filePath: string;
-    }[];
-  }[];
-  createdAt: Date;
-  updatedAt: Date;
-}
 
-const chatSchema = new Schema<IChat>({
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const chatSchema = new Schema({
   userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   messages: [{
     role: { type: String, enum: ['user', 'ai'], required: true },
@@ -34,4 +34,4 @@ const chatSchema = new Schema<IChat>({
   timestamps: true
 });
 
-export default mongoose.model<IChat>("Chat", chatSchema);
+export default mongoose.model("Chat", chatSchema);

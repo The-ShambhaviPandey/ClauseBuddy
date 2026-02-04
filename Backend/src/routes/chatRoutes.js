@@ -40,7 +40,7 @@ const upload = multer({
 });
 
 // Get user's chat history
-router.get('/history', authenticateToken, async (req: any, res) => {
+router.get('/history', authenticateToken, async (req, res) => {
   try {
     const chats = await Chat.find({ userId: req.user._id })
       .sort({ updatedAt: -1 })
@@ -54,7 +54,7 @@ router.get('/history', authenticateToken, async (req: any, res) => {
 });
 
 // Get user's uploaded files
-router.get('/files', authenticateToken, async (req: any, res) => {
+router.get('/files', authenticateToken, async (req, res) => {
   try {
     const files = await File.find({ userId: req.user._id })
       .sort({ uploadedAt: -1 })
@@ -68,7 +68,7 @@ router.get('/files', authenticateToken, async (req: any, res) => {
 });
 
 // Delete a user's uploaded file
-router.delete('/files/:fileId', authenticateToken, async (req: any, res) => {
+router.delete('/files/:fileId', authenticateToken, async (req, res) => {
   try {
     const file = await File.findOne({ _id: req.params.fileId, userId: req.user._id });
     if (!file) return res.status(404).json({ message: 'File not found' });
@@ -84,7 +84,7 @@ router.delete('/files/:fileId', authenticateToken, async (req: any, res) => {
 });
 
 // Get specific chat
-router.get('/:chatId', authenticateToken, async (req: any, res) => {
+router.get('/:chatId', authenticateToken, async (req, res) => {
   try {
     const chatId = req.params.chatId;
     if (!/^[a-fA-F0-9]{24}$/.test(chatId)) {
@@ -102,7 +102,7 @@ router.get('/:chatId', authenticateToken, async (req: any, res) => {
 });
 
 // Create new chat or add message to existing chat
-router.post('/', authenticateToken, async (req: any, res) => {
+router.post('/', authenticateToken, async (req, res) => {
   try {
     const { message, files, chatId } = req.body;
 
@@ -146,7 +146,7 @@ router.post('/', authenticateToken, async (req: any, res) => {
 });
 
 // Upload file
-router.post('/upload', authenticateToken, upload.single('file'), async (req: any, res) => {
+router.post('/upload', authenticateToken, upload.single('file'), async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ message: 'No file uploaded' });
 

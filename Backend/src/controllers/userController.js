@@ -1,7 +1,7 @@
-import { Request, Response } from "express";
+
 import User from "../models/User";
 
-export const getUsers = async (req: Request, res: Response) => {
+export const getUsers = async (req, res) => {
   try {
     const users = await User.find();
     res.json(users);
@@ -10,7 +10,7 @@ export const getUsers = async (req: Request, res: Response) => {
   }
 };
 
-export const createUser = async (req: Request, res: Response) => {
+export const createUser = async (req, res) => {
   try {
     const { name, email } = req.body;
     const user = new User({ name, email });

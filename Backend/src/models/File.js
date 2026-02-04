@@ -1,16 +1,16 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema, } from "mongoose";
 
-export interface IFile extends Document {
-  userId: mongoose.Types.ObjectId;
-  fileName: string;
-  originalName: string;
-  fileType: string;
-  fileSize: number;
-  filePath: string;
-  uploadedAt: Date;
-}
 
-const fileSchema = new Schema<IFile>({
+
+
+
+
+
+
+
+
+
+const fileSchema = new Schema({
   userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   fileName: { type: String, required: true }, // stored filename
   originalName: { type: String, required: true }, // original filename
@@ -20,4 +20,4 @@ const fileSchema = new Schema<IFile>({
   uploadedAt: { type: Date, default: Date.now }
 });
 
-export default mongoose.model<IFile>("File", fileSchema);
+export default mongoose.model("File", fileSchema);
