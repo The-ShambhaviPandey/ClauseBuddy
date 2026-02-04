@@ -5,11 +5,11 @@ import express from "express";
 import path from "path";
 import cors from "cors";
 import passport from "passport";
-import connectDB from "./config/db";
-import "./config/passport";
-import userRoutes from "./routes/userRoutes";
-import authRoutes from "./routes/authRoutes";
-import chatRoutes from "./routes/chatRoutes";
+import connectDB from "./config/db.js";
+import "./config/passport.js";
+import userRoutes from "./routes/userRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+import chatRoutes from "./routes/chatRoutes.js";
 
 // New imports for file upload
 import multer from "multer";
