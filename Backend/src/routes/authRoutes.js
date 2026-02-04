@@ -2,7 +2,7 @@ import express from 'express';
 import passport from 'passport';
 import jwt from 'jsonwebtoken';
 import { OAuth2Client } from 'google-auth-library';
-import User from '../models/User';
+import User from '../models/User.js';
 
 const router = express.Router();
 
