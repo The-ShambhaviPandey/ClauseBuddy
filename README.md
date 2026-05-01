@@ -1,6 +1,6 @@
 # ⚖️ ClauseBuddy - LegalAI
 
-[![Watch Demo](https://img.icons8.com/color/48/000000/video.png)](https://drive.google.com/file/d/1bSFBKTt3UUVE8fr9pqqHxm_RPo59NlTB/view?usp=sharing)  
+[![Watch Demo](https://img.icons8.com/color/48/000000/video.png)](https://github.com/user-attachments/assets/6767f71e-ca38-4a24-8b71-04569b86a145)  
 **🎬 Watch the demo video**
 
 LegalAI is an **AI-powered assistant** that helps analyze, summarize, and answer questions from **legal documents**.  
