@@ -1,10 +1,11 @@
 {
   "name": "backend1",
   "version": "1.0.0",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --watch src --exec ts-node src/index.ts",
-    "build": "tsc -p tsconfig.json",
+    "dev": "nodemon --watch src --exec node src/index.js",
+    "build": "rm -rf dist && mkdir -p dist && cp -R src/* dist/",
     "start": "node dist/index.js"
   },
   "keywords": [],
@@ -13,10 +14,6 @@
   "description": "",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@types/jsonwebtoken": "^9.0.10",
-    "@types/multer": "^2.0.0",
-    "@types/passport": "^1.0.17",
-    "@types/passport-google-oauth20": "^2.0.16",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
@@ -32,12 +29,6 @@
     "pdf-parse": "^1.1.1"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.5.2",
-    "@types/pdf-parse": "^1.1.5",
-    "nodemon": "^3.1.10",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "nodemon": "^3.1.10"
   }
 }
